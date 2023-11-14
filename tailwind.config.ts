@@ -18,3 +18,12 @@ const config: Config = {
   plugins: [],
 }
 export default config
+const withMT = require('@material-tailwind/react/utils/withMT');
+
+module.exports = withMT({
+  content: ['./pages/**/*/[js,ts,jsx,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [require('daisyui')],
+});
